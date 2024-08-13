@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- [Head] start -->
+
+<head>
+  <title>복지얌 빵빵아</title>
+  <!-- [Meta] -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="description"
+    content="Light Able admin and dashboard template offer a variety of UI elements and pages, ensuring your admin panel is both fast and effective." />
+  <meta name="author" content="phoenixcoded" />
+  <link rel="stylesheet" href="../assets/fonts/font.css">
+  <!-- [Favicon] icon -->
+  <link rel="icon" href="../assets/images/title_logo.png" type="image/x-icon">
+
+  <!-- map-vector css -->
+  <link rel="stylesheet" href="../assets/css/plugins/jsvectormap.min.css">
+  <!-- [Google Font : Public Sans] icon -->
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- [Tabler Icons] https://tablericons.com -->
+  <link rel="stylesheet" href="../assets/fonts/tabler-icons.min.css">
+  <!-- [Feather Icons] https://feathericons.com -->
+  <link rel="stylesheet" href="../assets/fonts/feather.css">
+  <!-- [Font Awesome Icons] https://fontawesome.com/icons -->
+  <link rel="stylesheet" href="../assets/fonts/fontawesome.css">
+  <!-- [Material Icons] https://fonts.google.com/icons -->
+  <link rel="stylesheet" href="../assets/fonts/material.css">
+  <!-- [Template CSS Files] -->
+  <link rel="stylesheet" href="../assets/css/style.css" id="main-style-link">
+  <link rel="stylesheet" href="../assets/css/style-preset.css">
+
+</head>
+<!-- [Head] end -->
+<!-- [Body] Start -->
+
+<body data-pc-preset="preset-1" data-pc-direction="ltr" data-pc-theme="light">
+  <!-- [ Pre-loader ] start -->
+
+  <!-- [ Pre-loader ] End -->
+  <!-- [ Sidebar Menu ] start -->
+
+  <!-- [ Sidebar Menu ] end -->
+  <!-- [ Header Topbar ] start -->
+
+  <!-- [ Header ] end -->
+
+
+
+
+  <!-- [ Main Content ] start -->
+
+
+
+
+  <!-- [ Main Content ] start -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      var urlParams = new URLSearchParams(window.location.search);
+      var policyId = urlParams.get('policyId');
+
+      if (policyId) {
+        $.ajax({
+          url: './php/policy_detail.php', // PHP 파일 경로
+          type: 'POST',
+          data: { policy_id: policyId },
+
+          success: function (response) {
+            $('#policyDetails').html(response);
+            // JSON 데이터 처리
+
+          },
+          error: function () {
+            alert('서버 오류가 발생했습니다.');
+          }
+        });
+      }
+    });
+
+    // document.getElementById('name').addEventListener('change', function (e) {
+    //   var target = e.target;
+    //   var errorDiv = document.getElementById('bouncer-error_name');
+    //   if (target.value.trim() !== '') {
+    //     errorDiv.style.display = 'none'; // 입력값이 있으면 에러 메시지 숨기기
+    //     target.classList.remove('error'); // 에러 클래스 제거
+    //     target.classList.add('success'); // 성공 클래스 추가
+    //   } else {
+    //     errorDiv.style.display = 'block'; // 입력값이 없으면 에러 메시지 표시
+    //     target.classList.remove('success'); // 성공 클래스 제거
+    //     target.classList.add('error'); // 에러 클래스 추가
+    //   }
+    // });
+    // 주민등록번호 입력란에 자동으로 "-" 추가 및 최대 자릿수 제한
+    // document.getElementById('resident_registration_number').addEventListener('input', function (e) {
+    //   var target = e.target;
+    //   var regNumber = target.value.replace(/[^0-9]/g, ''); // 숫자 이외의 문자 제거
+
+    //   // "-" 추가 및 최대 자릿수 제한
+    //   var formattedRegNumber = '';
+    //   if (regNumber.length <= 6) {
+    //     formattedRegNumber = regNumber;
+    //   } else if (regNumber.length <= 13) {
+    //     formattedRegNumber = regNumber.substr(0, 6) + '-' + regNumber.substr(6);
+    //   } else {
+    //     formattedRegNumber = regNumber.substr(0, 6) + '-' + regNumber.substr(6, 7);
+
+    //   }
+
+    //   // 입력된 포맷이 적용된 주민등록번호를 입력란에 표시
+    // //   target.value = formattedRegNumber;
+
+    // //   // 입력값이 변경되었을 때만 에러 메시지 숨기기
+    // //   var errorDiv = document.getElementById('bouncer-error_resident_registration_number');
+    // //   if (regNumber.length == 13) {
+    // //     errorDiv.style.display = 'none'; // 에러 메시지 숨기기
+    // //     target.classList.remove('error'); // 에러 클래스 제거
+    // //     target.classList.add('success'); // 성공 클래스 추가
+    // //   } else {
+    // //     errorDiv.style.display = 'block'; // 에러 메시지 표시
+    // //     target.classList.remove('success'); // 성공 클래스 제거
+    // //     target.classList.add('error'); // 에러 클래스 추가
+    // //   }
+    // // });
+
+    // // // 이메일 입력란에서 입력값이 변경될 때마다 에러 메시지 숨기기
+    // // document.getElementById('email').addEventListener('change', function (e) {
+    // //   var target = e.target;
+    // //   var errorDiv = document.getElementById('bouncer-error_email');
+    // //   if (target.value.trim() !== '' && target.checkValidity()) {
+    // //     errorDiv.style.display = 'none'; // 입력값이 있고 유효하면 에러 메시지 숨기기
+    // //     target.classList.remove('error'); // 에러 클래스 제거
+    // //     target.classList.add('success'); // 성공 클래스 추가
+    // //   } else {
+    // //     errorDiv.style.display = 'block'; // 입력값이 없거나 유효하지 않으면 에러 메시지 표시
+    // //     target.classList.remove('success'); // 성공 클래스 제거
+    // //     target.classList.add('error'); // 에러 클래스 추가
+    // //   }
+    // // });
+    // // // 전화번호 입력란에 자동으로 "-" 추가
+    // // document.getElementById('tel').addEventListener('input', function (e) {
+    // //   var target = e.target;
+    // //   var telNumber = target.value.replace(/[^0-9]/g, ''); // 숫자 이외의 문자 제거
+    // //   var formattedTelNumber = ''; // 포맷이 적용된 전화번호를 저장할 변수
+
+    // //   // 입력한 전화번호의 길이가 3보다 작으면 그대로 출력
+    // //   if (telNumber.length <= 3) {
+    // //     formattedTelNumber = telNumber;
+    // //   }
+    // //   // 입력한 전화번호의 길이가 7보다 작으면 "-" 추가
+    // //   else if (telNumber.length <= 7) {
+    // //     formattedTelNumber = telNumber.substr(0, 3) + '-' + telNumber.substr(3);
+    // //   }
+    // //   // 입력한 전화번호의 길이가 11보다 작으면 "-" 추가
+    // //   else if (telNumber.length <= 11) {
+    // //     formattedTelNumber = telNumber.substr(0, 3) + '-' + telNumber.substr(3, 4) + '-' + telNumber.substr(7);
+    // //   }
+    // //   // 입력한 전화번호의 길이가 11보다 크면 "-" 추가 및 최대 길이 제한
+    // //   else {
+    // //     formattedTelNumber = telNumber.substr(0, 3) + '-' + telNumber.substr(3, 4) + '-' + telNumber.substr(7, 4);
+
+    // //   }
+
+    // //   // 입력된 포맷이 적용된 전화번호를 입력란에 표시
+    // //   target.value = formattedTelNumber;
+
+    // //   // 입력값이 변경되었을 때만 에러 메시지 숨기기
+    // //   var tel = document.getElementById('tel');
+    // //   var errorDiv = document.getElementById('bouncer-error_tel');
+    // //   if (telNumber.length == 11) {
+    // //     errorDiv.style.display = 'none'; // 에러 메시지 숨기기
+    // //     target.classList.remove('error'); // 에러 클래스 제거
+    // //     target.classList.add('success'); // 성공 클래스 추가
+    // //   } else {
+    // //     errorDiv.style.display = 'block'; // 에러 메시지 표시
+    // //     target.classList.remove('success'); // 성공 클래스 제거
+    // //     target.classList.add('error'); // 에러 클래스 추가
+    // //   }
+    // });
+    document.getElementById('validate-me').addEventListener('submit', function (event) {
+      var name = document.getElementById('name');
+      var residentRegistrationNumber = document.getElementById('resident_registration_number');
+      var email = document.getElementById('email');
+      var tel = document.getElementById('tel');
+      var isValid = true;
+
+      // 이름 검증
+      // if (!name.value.trim()) {
+      //   document.getElementById('bouncer-error_name').style.display = 'block';
+      //   name.classList.add('error');
+      //   isValid = false;
+      // } else {
+      //   document.getElementById('bouncer-error_name').style.display = 'none';
+      //   name.classList.remove('error');
+      // }
+
+      // // 주민등록번호 검증
+      // if (!residentRegistrationNumber.value.trim() || residentRegistrationNumber.value.trim().length !== 14) {
+      //   document.getElementById('bouncer-error_resident_registration_number').style.display = 'block';
+      //   residentRegistrationNumber.classList.add('error');
+      //   isValid = false;
+      // } else {
+      //   document.getElementById('bouncer-error_resident_registration_number').style.display = 'none';
+      //   residentRegistrationNumber.classList.remove('error');
+      // }
+
+      // // 이메일 검증
+      // if (!email.value.trim() || !email.checkValidity()) {
+      //   document.getElementById('bouncer-error_email').style.display = 'block';
+      //   email.classList.add('error');
+      //   isValid = false;
+      // } else {
+      //   document.getElementById('bouncer-error_email').style.display = 'none';
+      //   email.classList.remove('error');
+      // }
+
+      // // 전화번호 검증
+      // if (!tel.value.trim() || tel.value.trim().length < 12) {
+      //   document.getElementById('bouncer-error_tel').style.display = 'block';
+      //   tel.classList.add('error');
+      //   isValid = false;
+      // } else {
+      //   document.getElementById('bouncer-error_tel').style.display = 'none';
+      //   tel.classList.remove('error');
+      // }
+
+      // if (!isValid) {
+      //   event.preventDefault(); // 폼 제출 방지
+      //   alert('모든 필드를 올바르게 채워주세요.');
+      // }
+    });
+
+  </script>
+
+
+
+
+  <div class="pc_container">
+    <div class="col-md-12 text-center">
+      <div id="policyDetails">
+        <!-- 여기에 AJAX 요청을 통해 받은 데이터가 표시됩니다. -->
+      </div>
+    </div>
+
+    
+
+  <script>
+    
+  </script>
+  <!-- [ Main Content ] end -->
+
+
+
+  <!-- [ Main Content ] end -->
+
+
+  <!-- [Page Specific JS] start -->
+  <script src="../assets/js/plugins/apexcharts.min.js"></script>
+  <script src="../assets/js/plugins/jsvectormap.min.js"></script>
+  <script src="../assets/js/plugins/world.js"></script>
+  <script src="../assets/js/plugins/world-merc.js"></script>
+  <script src="../assets/js/pages/dashboard-default.js"></script>
+  <!-- [Page Specific JS] end -->
+  <!-- Required Js -->
+  <script src="../assets/js/plugins/popper.min.js"></script>
+  <script src="../assets/js/plugins/simplebar.min.js"></script>
+  <script src="../assets/js/plugins/bootstrap.min.js"></script>
+  <script src="../assets/js/fonts/custom-font.js"></script>
+  <script src="../assets/js/pcoded1.js"></script>
+  <script src="../assets/js/plugins/feather.min.js"></script>
+
+
+
+
+
+
+
+
+
+</body>
+<!-- [Body] end -->
+
+</html>

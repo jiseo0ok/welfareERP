@@ -1,0 +1,12 @@
+
+@font-face {
+    font-family: "Gamja Flower";
+    font-weight: 400;
+    src: url("GamjaFlower-Regular.ttf") format("truetype");
+  }
+
+  label.dash {
+    font-family: "Gamja Flower", sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }

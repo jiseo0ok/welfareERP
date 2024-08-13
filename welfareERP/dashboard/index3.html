@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- [Head] start -->
+
+<head>
+  <title>복지얌 빵빵아</title>
+  <!-- [Meta] -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="description"
+    content="Light Able admin and dashboard template offer a variety of UI elements and pages, ensuring your admin panel is both fast and effective." />
+  <meta name="author" content="phoenixcoded" />
+  
+  <!-- 글꼴 -->
+  <link rel="stylesheet" href="../assets/fonts/font.css">
+  
+  <!-- [Favicon] icon -->
+  <link rel="icon" href="../assets/images/title_logo.png" type="image/x-icon">
+  
+  <!-- map-vector css -->
+  <link rel="stylesheet" href="../assets/css/plugins/jsvectormap.min.css">
+  <!-- [Google Font : Public Sans] icon -->
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- [Tabler Icons] https://tablericons.com -->
+  <link rel="stylesheet" href="../assets/fonts/tabler-icons.min.css">
+  <!-- [Feather Icons] https://feathericons.com -->
+  <link rel="stylesheet" href="../assets/fonts/feather.css">
+  <!-- [Font Awesome Icons] https://fontawesome.com/icons -->
+  <link rel="stylesheet" href="../assets/fonts/fontawesome.css">
+  <!-- [Material Icons] https://fonts.google.com/icons -->
+  <link rel="stylesheet" href="../assets/fonts/material.css">
+  <!-- [Template CSS Files] -->
+  <link rel="stylesheet" href="../assets/css/style.css" id="main-style-link">
+  <link rel="stylesheet" href="../assets/css/style-preset.css">
+
+</head>
+<!-- [Head] end -->
+<!-- [Body] Start -->
+
+<body data-pc-preset="preset-1" data-pc-sidebar-theme="light" data-pc-sidebar-caption="true" data-pc-direction="ltr"
+  data-pc-theme="light">
+  <!-- [ Pre-loader ] start -->
+  <div class="loader-bg">
+    <div class="loader-track">
+      <div class="loader-fill"></div>
+    </div>
+  </div>
+  <!-- [ Pre-loader ] End -->
+  <!-- [ Sidebar Menu ] start -->
+  <nav class="pc-sidebar">
+    <div class="navbar-wrapper">
+      <div class="m-header">
+        <a href="../dashboard/index.html" class="b-brand text-primary">
+          <img src="../assets/images/logo.png" width="185" alt="logo image" />
+          <span class="badge bg-brand-color-2 rounded-pill ms-2 theme-version"></span>
+        </a>
+      </div>
+      </br>
+      <div class="navbar-content">
+        <ul class="pc-navbar">
+          <li class="pc-item pc-caption">
+            <label class="dash">사용자 메뉴</label>
+            <i class="ph-duotone ph-textbox"></i>
+          </li>
+          <li class="pc-item pc-hasmenu">
+            <a href="#!" class="pc-link">
+              <span class="pc-micon"><i class="ph-duotone ph-magnifying-glass"></i></span>
+              <span class="pc-mtext">정책 검색</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
+            <ul class="pc-submenu">
+              <li class="pc-item"><a class="pc-link" href="#">정책 검색</a></li>
+
+            </ul>
+          </li>
+          </br>
+          <li class="pc-item pc-caption">
+            <label class="dash">관리자 메뉴</label>
+            <i class="ph-duotone ph-textbox"></i>
+          </li>
+          <li class="pc-item pc-hasmenu">
+            <a href="#!" class="pc-link">
+              <span class="pc-micon"><i class="ph-duotone ph-gear-six"></i></span>
+              <span class="pc-mtext">정책 관리</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
+            <ul class="pc-submenu">
+              <li class="pc-item"><a class="pc-link" href="../forms/form_elements.html">정책 등록</a></li>
+              <li class="pc-item"><a class="pc-link" href="../table/tbl_dt-methods.html">지원 현황</a></li>
+              <li class="pc-item pc-hasmenu">
+                <a class="pc-link" href="#">정책 수행<span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
+                <ul class="pc-submenu">
+                  <li class="pc-item"><a class="pc-link" href="../forms/form2_datepicker.html">지원금 관리</a></li>
+                  <li class="pc-item"><a class="pc-link" href="../forms/form2_daterangepicker.html">복지사 관리</a> </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          </br>
+          <li class="pc-item pc-caption">
+            <label class="dash">사회복지사 메뉴</label>
+            <i class="ph-duotone ph-textbox"></i>
+          </li>
+          <li class="pc-item pc-hasmenu">
+            <a href="#!" class="pc-link">
+              <span class="pc-micon"><i class="ph-duotone ph-heart"></i></span>
+              <span class="pc-mtext">사회복지사</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
+            <ul class="pc-submenu">
+              <li class="pc-item"><a class="pc-link" href="../application/account-profile.html">사회복지사</a></li>
+
+            </ul>
+          </li>
+
+
+      </div>
+      <div class="card pc-user-card">
+        <div class="card-body">
+          <div class="d-flex align-items-center">
+            <div class="flex-shrink-0">
+              <!-- <img src="../assets/images/user/avatar-1.jpg" alt="user-image" class="user-avtar wid-45 rounded-circle" /> -->
+            </div>
+            <div class="flex-grow-1 ms-3 me-2">
+              <!-- <h6 class="mb-0">Jonh Smith</h6>
+              <small>Administrator</small> -->
+            </div>
+            <div class="dropdown">
+              <!-- <a href="#" class="btn btn-icon btn-link-secondary avtar arrow-none dropdown-toggle"
+                data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="0,20">
+                <i class="ph-duotone ph-windows-logo"></i>
+              </a> -->
+              <div class="dropdown-menu">
+                <ul>
+                  <li><a class="pc-user-links">
+                      <i class="ph-duotone ph-user"></i>
+                      <span>My Account</span>
+                    </a></li>
+                  <li><a class="pc-user-links">
+                      <i class="ph-duotone ph-gear"></i>
+                      <span>Settings</span>
+                    </a></li>
+                  <li><a class="pc-user-links">
+                      <i class="ph-duotone ph-lock-key"></i>
+                      <span>Lock Screen</span>
+                    </a></li>
+                  <li><a class="pc-user-links">
+                      <i class="ph-duotone ph-power"></i>
+                      <span>Logout</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- [ Sidebar Menu ] end -->
+  <!-- [ Header Topbar ] start -->
+  <header class="pc-header">
+    <div class="header-wrapper"> <!-- [Mobile Media Block] start -->
+      <div class="me-auto pc-mob-drp">
+        <ul class="list-unstyled">
+          <!-- ======= Menu collapse Icon ===== -->
+          <li class="pc-h-item pc-sidebar-collapse">
+            <a href="#" class="pc-head-link ms-0" id="sidebar-hide">
+              <i class="ti ti-menu-2"></i>
+            </a>
+          </li>
+          <li class="pc-h-item pc-sidebar-popup">
+            <a href="#" class="pc-head-link ms-0" id="mobile-collapse">
+              <i class="ti ti-menu-2"></i>
+            </a>
+          </li>
+          <li class="dropdown pc-h-item d-inline-flex d-md-none">
+            <a class="pc-head-link dropdown-toggle arrow-none m-0" data-bs-toggle="dropdown" href="#" role="button"
+              aria-haspopup="false" aria-expanded="false">
+              <i class="ph-duotone ph-magnifying-glass"></i>
+            </a>
+            <div class="dropdown-menu pc-h-dropdown drp-search">
+              <form class="px-3">
+                <div class="form-group mb-0 d-flex align-items-center">
+                  <input type="search" class="form-control border-0 shadow-none" placeholder="Search..." />
+                  <button class="btn btn-light-secondary btn-search">Search</button>
+                </div>
+              </form>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+      <!-- [Mobile Media Block end] -->
+      <div class="ms-auto">
+        <ul class="list-unstyled">
+          <li class="dropdown pc-h-item">
+            <a class="pc-head-link dropdown-toggle arrow-none me-0" data-bs-toggle="dropdown" href="#" role="button"
+              aria-haspopup="false" aria-expanded="false">
+              <i class="ph-duotone ph-sun-dim"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-end pc-h-dropdown">
+              <a href="#!" class="dropdown-item" onclick="layout_change('dark')">
+                <i class="ph-duotone ph-moon"></i>
+                <span>Dark</span>
+              </a>
+              <a href="#!" class="dropdown-item" onclick="layout_change('light')">
+                <i class="ph-duotone ph-sun-dim"></i>
+                <span>Light</span>
+              </a>
+              <a href="#!" class="dropdown-item" onclick="layout_change_default()">
+                <i class="ph-duotone ph-cpu"></i>
+                <span>Default</span>
+              </a>
+            </div>
+          </li>
+          <li class="pc-h-item">
+            <a class="pc-head-link" href="../index.html">
+              <i class="ph-duotone ph-house"></i>
+            </a>
+          </li>
+          <!-- <li class="pc-h-item">
+            <a class="pc-head-link pct-c-btn" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvas_pc_layout">
+              <i class="ph-duotone ph-gear-six"></i>
+            </a>
+          </li> -->
+          <!-- <li class="dropdown pc-h-item">
+            <a class="pc-head-link dropdown-toggle arrow-none me-0" data-bs-toggle="dropdown" href="#" role="button"
+              aria-haspopup="false" aria-expanded="false">
+              <i class="ph-duotone ph-diamonds-four"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-end pc-h-dropdown">
+              <a href="#!" class="dropdown-item">
+                <i class="ph-duotone ph-user"></i>
+                <span>My Account</span>
+              </a>
+              <a href="#!" class="dropdown-item">
+                <i class="ph-duotone ph-gear"></i>
+                <span>Settings</span>
+              </a>
+              <a href="#!" class="dropdown-item">
+                <i class="ph-duotone ph-lifebuoy"></i>
+                <span>Support</span>
+              </a>
+              <a href="#!" class="dropdown-item">
+                <i class="ph-duotone ph-lock-key"></i>
+                <span>Lock Screen</span>
+              </a>
+              <a href="#!" class="dropdown-item">
+                <i class="ph-duotone ph-power"></i>
+                <span>Logout</span>
+              </a>
+            </div>
+          </li> -->
+          <!-- <li class="dropdown pc-h-item">
+            <a class="pc-head-link dropdown-toggle arrow-none me-0" data-bs-toggle="dropdown" href="#" role="button"
+              aria-haspopup="false" aria-expanded="false">
+              <i class="ph-duotone ph-bell"></i>
+              <span class="badge bg-success pc-h-badge">3</span>
+            </a>
+            <div class="dropdown-menu dropdown-notification dropdown-menu-end pc-h-dropdown">
+              <div class="dropdown-header d-flex align-items-center justify-content-between">
+                <h5 class="m-0">Notifications</h5>
+                <ul class="list-inline ms-auto mb-0">
+                  <li class="list-inline-item">
+                    <a href="../application/mail.html" class="avtar avtar-s btn-link-hover-primary">
+                      <i class="ti ti-link f-18"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="dropdown-body text-wrap header-notification-scroll position-relative"
+                style="max-height: calc(100vh - 235px)">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    <p class="text-span">Today</p>
+                    <div class="d-flex">
+                      <div class="flex-shrink-0">
+                        <img src="../assets/images/user/avatar-2.jpg" alt="user-image"
+                          class="user-avtar avtar avtar-s" />
+                      </div>
+                      <div class="flex-grow-1 ms-3">
+                        <div class="d-flex">
+                          <div class="flex-grow-1 me-3 position-relative">
+                            <h6 class="mb-0 text-truncate">Keefe Bond added new tags to 💪 Design system</h6>
+                          </div>
+                          <div class="flex-shrink-0">
+                            <span class="text-sm">2 min ago</span>
+                          </div>
+                        </div>
+                        <p class="position-relative mt-1 mb-2"><br /><span class="text-truncate">Lorem Ipsum has been
+                            the industry's standard dummy text ever since the 1500s.</span></p>
+                        <span class="badge bg-light-primary border border-primary me-1 mt-1">web design</span>
+                        <span class="badge bg-light-warning border border-warning me-1 mt-1">Dashobard</span>
+                        <span class="badge bg-light-success border border-success me-1 mt-1">Design System</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="d-flex">
+                      <div class="flex-shrink-0">
+                        <div class="avtar avtar-s bg-light-primary">
+                          <i class="ph-duotone ph-chats-teardrop f-18"></i>
+                        </div>
+                      </div>
+                      <div class="flex-grow-1 ms-3">
+                        <div class="d-flex">
+                          <div class="flex-grow-1 me-3 position-relative">
+                            <h6 class="mb-0 text-truncate">Message</h6>
+                          </div>
+                          <div class="flex-shrink-0">
+                            <span class="text-sm">1 hour ago</span>
+                          </div>
+                        </div>
+                        <p class="position-relative mt-1 mb-2"><br /><span class="text-truncate">Lorem Ipsum has been
+                            the industry's standard dummy text ever since the 1500s.</span></p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <p class="text-span">Yesterday</p>
+                    <div class="d-flex">
+                      <div class="flex-shrink-0">
+                        <div class="avtar avtar-s bg-light-danger">
+                          <i class="ph-duotone ph-user f-18"></i>
+                        </div>
+                      </div>
+                      <div class="flex-grow-1 ms-3">
+                        <div class="d-flex">
+                          <div class="flex-grow-1 me-3 position-relative">
+                            <h6 class="mb-0 text-truncate">Challenge invitation</h6>
+                          </div>
+                          <div class="flex-shrink-0">
+                            <span class="text-sm">12 hour ago</span>
+                          </div>
+                        </div>
+                        <p class="position-relative mt-1 mb-2"><br /><span class="text-truncate"><strong> Jonny aber
+                            </strong> invites to join the challenge</span></p>
+                        <button class="btn btn-sm rounded-pill btn-outline-secondary me-2">Decline</button>
+                        <button class="btn btn-sm rounded-pill btn-primary">Accept</button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="d-flex">
+                      <div class="flex-shrink-0">
+                        <div class="avtar avtar-s bg-light-info">
+                          <i class="ph-duotone ph-notebook f-18"></i>
+                        </div>
+                      </div>
+                      <div class="flex-grow-1 ms-3">
+                        <div class="d-flex">
+                          <div class="flex-grow-1 me-3 position-relative">
+                            <h6 class="mb-0 text-truncate">Forms</h6>
+                          </div>
+                          <div class="flex-shrink-0">
+                            <span class="text-sm">2 hour ago</span>
+                          </div>
+                        </div>
+                        <p class="position-relative mt-1 mb-2">Lorem Ipsum is simply dummy text of the printing and
+                          typesetting industry. Lorem Ipsum has been the industry's standard
+                          dummy text ever since the 1500s.</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="d-flex">
+                      <div class="flex-shrink-0">
+                        <img src="../assets/images/user/avatar-2.jpg" alt="user-image"
+                          class="user-avtar avtar avtar-s" />
+                      </div>
+                      <div class="flex-grow-1 ms-3">
+                        <div class="d-flex">
+                          <div class="flex-grow-1 me-3 position-relative">
+                            <h6 class="mb-0 text-truncate">Keefe Bond added new tags to 💪 Design system</h6>
+                          </div>
+                          <div class="flex-shrink-0">
+                            <span class="text-sm">2 min ago</span>
+                          </div>
+                        </div>
+                        <p class="position-relative mt-1 mb-2"><br /><span class="text-truncate">Lorem Ipsum has been
+                            the industry's standard dummy text ever since the 1500s.</span></p>
+                        <button class="btn btn-sm rounded-pill btn-outline-secondary me-2">Decline</button>
+                        <button class="btn btn-sm rounded-pill btn-primary">Accept</button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="d-flex">
+                      <div class="flex-shrink-0">
+                        <div class="avtar avtar-s bg-light-success">
+                          <i class="ph-duotone ph-shield-checkered f-18"></i>
+                        </div>
+                      </div>
+                      <div class="flex-grow-1 ms-3">
+                        <div class="d-flex">
+                          <div class="flex-grow-1 me-3 position-relative">
+                            <h6 class="mb-0 text-truncate">Security</h6>
+                          </div>
+                          <div class="flex-shrink-0">
+                            <span class="text-sm">5 hour ago</span>
+                          </div>
+                        </div>
+                        <p class="position-relative mt-1 mb-2">Lorem Ipsum is simply dummy text of the printing and
+                          typesetting industry. Lorem Ipsum has been the industry's standard
+                          dummy text ever since the 1500s.</p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="dropdown-footer">
+                <div class="row g-3">
+                  <div class="col-6">
+                    <div class="d-grid"><button class="btn btn-primary">Archive all</button></div>
+                  </div>
+                  <div class="col-6">
+                    <div class="d-grid"><button class="btn btn-outline-secondary">Mark all as read</button></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li> -->
+          <!-- <li class="dropdown pc-h-item header-user-profile">
+            <a class="pc-head-link dropdown-toggle arrow-none me-0" data-bs-toggle="dropdown" href="#" role="button"
+              aria-haspopup="false" data-bs-auto-close="outside" aria-expanded="false">
+              <img src="../assets/images/user/avatar-2.jpg" alt="user-image" class="user-avtar" />
+            </a>
+            <div class="dropdown-menu dropdown-user-profile dropdown-menu-end pc-h-dropdown">
+              <div class="dropdown-header d-flex align-items-center justify-content-between">
+                <h5 class="m-0">Profile</h5>
+              </div>
+              <div class="dropdown-body">
+                <div class="profile-notification-scroll position-relative" style="max-height: calc(100vh - 225px)">
+                  <ul class="list-group list-group-flush w-100">
+                    <li class="list-group-item">
+                      <div class="d-flex align-items-center">
+                        <div class="flex-shrink-0">
+                          <img src="../assets/images/user/avatar-2.jpg" alt="user-image"
+                            class="wid-50 rounded-circle" />
+                        </div>
+                        <div class="flex-grow-1 mx-3">
+                          <h5 class="mb-0">Carson Darrin</h5>
+                          <a class="link-primary" href="mailto:carson.darrin@company.io">carson.darrin@company.io</a>
+                        </div>
+                        <span class="badge bg-primary">PRO</span>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <a href="#" class="dropdown-item">
+                        <span class="d-flex align-items-center">
+                          <i class="ph-duotone ph-key"></i>
+                          <span>Change password</span>
+                        </span>
+                      </a>
+                      <a href="#" class="dropdown-item">
+                        <span class="d-flex align-items-center">
+                          <i class="ph-duotone ph-envelope-simple"></i>
+                          <span>Recently mail</span>
+                        </span>
+                        <div class="user-group">
+                          <img src="../assets/images/user/avatar-1.jpg" alt="user-image" class="avtar" />
+                          <img src="../assets/images/user/avatar-2.jpg" alt="user-image" class="avtar" />
+                          <img src="../assets/images/user/avatar-3.jpg" alt="user-image" class="avtar" />
+                        </div>
+                      </a>
+                      <a href="#" class="dropdown-item">
+                        <span class="d-flex align-items-center">
+                          <i class="ph-duotone ph-calendar-blank"></i>
+                          <span>Schedule meetings</span>
+                        </span>
+                      </a>
+                    </li>
+                    <li class="list-group-item">
+                      <a href="#" class="dropdown-item">
+                        <span class="d-flex align-items-center">
+                          <i class="ph-duotone ph-heart"></i>
+                          <span>Favorite</span>
+                        </span>
+                      </a>
+                      <a href="#" class="dropdown-item">
+                        <span class="d-flex align-items-center">
+                          <i class="ph-duotone ph-arrow-circle-down"></i>
+                          <span>Download</span>
+                        </span>
+                        <span class="avtar avtar-xs rounded-circle bg-danger text-white">10</span>
+                      </a>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="dropdown-item">
+                        <span class="d-flex align-items-center">
+                          <i class="ph-duotone ph-globe-hemisphere-west"></i>
+                          <span>Languages</span>
+                        </span>
+                        <span class="flex-shrink-0">
+                          <select class="form-select bg-transparent form-select-sm border-0 shadow-none">
+                            <option value="1">English</option>
+                            <option value="2">Spain</option>
+                            <option value="3">Arbic</option>
+                          </select>
+                        </span>
+                      </div>
+                      <a href="#" class="dropdown-item">
+                        <span class="d-flex align-items-center">
+                          <i class="ph-duotone ph-flag"></i>
+                          <span>Country</span>
+                        </span>
+                      </a>
+                      <div class="dropdown-item">
+                        <span class="d-flex align-items-center">
+                          <i class="ph-duotone ph-moon"></i>
+                          <span>Dark mode</span>
+                        </span>
+                        <div class="form-check form-switch form-check-reverse m-0">
+                          <input class="form-check-input f-18" id="dark-mode" type="checkbox" onclick="dark_mode()"
+                            role="switch" />
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <a href="#" class="dropdown-item">
+                        <span class="d-flex align-items-center">
+                          <i class="ph-duotone ph-user-circle"></i>
+                          <span>Edit profile</span>
+                        </span>
+                      </a>
+                      <a href="#" class="dropdown-item">
+                        <span class="d-flex align-items-center">
+                          <i class="ph-duotone ph-star text-warning"></i>
+                          <span>Upgrade account</span>
+                          <span class="badge bg-light-success border border-success ms-2">NEW</span>
+                        </span>
+                      </a>
+                      <a href="#" class="dropdown-item">
+                        <span class="d-flex align-items-center">
+                          <i class="ph-duotone ph-bell"></i>
+                          <span>Notifications</span>
+                        </span>
+                      </a>
+                      <a href="#" class="dropdown-item">
+                        <span class="d-flex align-items-center">
+                          <i class="ph-duotone ph-gear-six"></i>
+                          <span>Settings</span>
+                        </span>
+                      </a>
+                    </li>
+                    <li class="list-group-item">
+                      <a href="#" class="dropdown-item">
+                        <span class="d-flex align-items-center">
+                          <i class="ph-duotone ph-plus-circle"></i>
+                          <span>Add account</span>
+                        </span>
+                      </a>
+                      <a href="#" class="dropdown-item">
+                        <span class="d-flex align-items-center">
+                          <i class="ph-duotone ph-power"></i>
+                          <span>Logout</span>
+                        </span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li> -->
+        </ul>
+      </div>
+    </div>
+  </header>
+  <!-- [ Header ] end -->
+
+
+
+  <!-- [ Main Content ] start -->
+  <div class="pc-container">
+    <div class="pc-content">
+      <!-- [ breadcrumb ] start -->
+      <div class="page-header">
+        <div class="page-block">
+          <div class="row align-items-center">
+            <div class="col-md-12">
+
+            </div>
+            <div class="col-md-12 text-center">
+              <div class="page-header-title">
+                <h2 class="mb-0">복지검색</h2>
+              </br>
+              </div>
+
+            </div>
+
+
+          </div>
+
+
+
+        </div>
+      </div>
+      <!-- [ breadcrumb ] end -->
+
+      <!-- [ Main Content ] start -->
+
+
+
+      <div class="container ">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card">
+              <form class="form-group" name="welfareSearchForm" action="./php/welfare_search.php" method="post"
+                enctype="multipart/form-data">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <!-- 지역 선택 -->
+
+                      <div class="form-group">
+                        <label for="region1"><b>지역선택</b></label>
+                        <select class="form-select" id="region1" name="region1">
+                          <option value="">선택</option>
+                          <option value="강원특별자치도">강원특별자치도</option>
+                          <option value="경기도">경기도</option>
+                          <option value="경상남도">경상남도</option>
+                          <option value="경상북도">경상북도</option>
+                          <option value="광주광역시">광주광역시</option>
+                          <option value="대구광역시">대구광역시</option>
+                          <option value="대전광역시">대전광역시</option>
+                          <option value="부산광역시">부산광역시</option>
+                          <option value="서울특별시">서울특별시</option>
+                          <option value="세종특별자치시">세종특별자치시</option>
+                          <option value="울산광역시">울산광역시</option>
+                          <option value="인천광역시">인천광역시</option>
+                          <option value="전라남도">전라남도</option>
+                          <option value="전북특별자치도">전북특별자치도</option>
+                          <option value="제주특별자치도">제주특별자치도</option>
+                          <option value="충청남도">충청남도</option>
+                          <option value="충청북도">충청북도</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <!-- 세부지역 선택 -->
+                      <div class="form-group">
+                        <label for="region2"><b>세부지역선택</b></label>
+                        <select class="form-select" id="region2" name="region2">
+                          <!-- 세부지역 옵션은 JavaScript를 통해 동적으로 생성됩니다. -->
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="form-label" for="policyAgeRange"><b>지원 가능 연령대</b></label>
+                        <br>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" name="policyAgeRange" value="under10"
+                            id="under10">
+                          <label class="form-check-label" for="under10">10대 미만</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" name="policyAgeRange" value="age10"
+                            id="age10">
+                          <label class="form-check-label" for="age10">10대</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" name="policyAgeRange" value="age20"
+                            id="age20">
+                          <label class="form-check-label" for="age20">20대</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" name="policyAgeRange" value="age30"
+                            id="age30">
+                          <label class="form-check-label" for="age30">30대</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" name="policyAgeRange" value="age40"
+                            id="age40">
+                          <label class="form-check-label" for="age40">40대</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" name="policyAgeRange" value="age50"
+                            id="age50">
+                          <label class="form-check-label" for="age50">50대</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" name="policyAgeRange" value="age60"
+                            id="age60">
+                          <label class="form-check-label" for="age60">60대</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" name="policyAgeRange" value="up70" id="up70">
+                          <label class="form-check-label" for="up70">70대 이상</label>
+                        </div>
+                      </div>
+                      </div>
+                      <div class="col-md-6">
+                        <!-- 직업 선택 -->
+                        <div class="form-group">
+
+                          <label class="form-label" for="how"><b>정책혜택</b></label>
+                          <select class="form-select" id="how" name="how">
+                            <option value="">선택</option>
+                            <option value="지원금">지원금</option>
+                            <option value="복지사">복지사</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="form-group">
+
+                        <label class="form-label" for="wjdcordate"><b>정책마감날짜</b></label>
+                        <input class="form-control" type="date" value="2021-12-31" id="wjdcordate" name="wjdcordate">
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <!-- 가구상황 -->
+                      <div class="form-group">
+
+                        <label class="form-label" for="family-situation"><b>정책유형</b></label>
+                        <div class="form-group">
+                          <div class="col-sm-12">
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="checkbox" value="기타" id="family-none"
+                                name="family-situation" checked>
+                              <label class="form-check-label" for="family-none"> 기타 </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="checkbox" value="주거" id="family-low-income"
+                                name="family-situation">
+                              <label class="form-check-label" for="family-low-income"> 주거 </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="checkbox" value="생활" id="family-disabled"
+                                name="family-situation">
+                              <label class="form-check-label" for="family-disabled"> 생활 </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="checkbox" value="의료" id="family-single-parent"
+                                name="family-situation">
+                              <label class="form-check-label" for="family-single-parent"> 의료 </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="checkbox" value="교육" id="family-multiple-children"
+                                name="family-situation">
+                              <label class="form-check-label" for="family-multiple-children"> 교육 </label>
+                            </div>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="d-grid gap-2 mt-2">
+                    <input type="submit" id="btn-search" class="btn btn-primary m-3 " onclick="search_result();"
+                      value="검색하기">
+                  </div>
+                </div>
+              </form>
+            </div>
+
+          </div>
+
+          <div class="card-body">
+            <p class="search-result text-center">
+            </p>
+          </div>
+        </div>
+
+        <div class="row" id="result_card" style="display:none; justify-content: flex-start; align-items: stretch;">
+
+
+
+
+
+
+        </div> <!--끝-->
+
+      </div>
+    </div>
+  </div>
+  <script>
+    // 팝업을 띄우는 함수
+    function openPopup() {
+      const screenWidth = window.innerWidth;
+      const screenHeight = window.innerHeight;
+      const width = screenWidth * 0.6;
+      const height = screenHeight * 0.7;
+      const left = (screenWidth - width) / 2;
+      const top = (screenHeight - height) / 2;
+
+      const popupWindow = window.open('index2.html', 'popupWindow', `width=${width},height=${height},left=${left},top=${top}`);
+      if (window.focus) {
+        popupWindow.focus();
+      }
+    }
+  </script>
+
+  <script>
+    // "해당없음" 체크박스 관련 로직
+    const familyNoneCheckbox = document.getElementById('family-none');
+    familyNoneCheckbox.addEventListener('change', function () {
+      if (this.checked) {
+        uncheckOtherCheckboxes();
+      }
+    });
+
+    function uncheckOtherCheckboxes() {
+      const checkboxes = ['family-low-income', 'family-disabled', 'family-single-parent', 'family-multiple-children', 'family-multicultural', 'family-veteran'];
+      checkboxes.forEach(id => document.getElementById(id).checked = false);
+    }
+
+    const otherCheckboxes = document.querySelectorAll('input[type="checkbox"]:not(#family-none)');
+    otherCheckboxes.forEach(checkbox => {
+      checkbox.addEventListener('change', () => {
+        if (checkbox.checked) {
+          familyNoneCheckbox.checked = false;
+        }
+      });
+    });
+  </script>
+
+  <script>
+    // 검색 결과를 표시하는 함수
+    function search_result() {
+      const region1Value = document.getElementById('region1').value || "무관";
+      const region2Value = document.getElementById('region2').value || "무관";
+
+      const wjdcorDateValue = document.getElementById('wjdcordate').value;
+      const howValue = document.getElementById('how').value || "무관";
+
+      const wjdcorDate = new Date(wjdcorDateValue);
+      const currentDate = new Date();
+
+      const ageCheckboxes = document.querySelectorAll('input[name="policyAgeRange"]:checked');
+      const selectedAges = Array.from(ageCheckboxes).map(checkbox => checkbox.value);
+      const ageRangeString = selectedAges.join(', ') || "모든 연령대";
+
+      const familyCheckboxes = document.querySelectorAll('.form-check-input');
+      const selectedFamilySituations = Array.from(familyCheckboxes).filter(checkbox => checkbox.checked).map(checkbox => checkbox.value);
+      const familySituationString = selectedFamilySituations.join(', ') || "해당없음";
+
+      const resultContainer = document.querySelector('.search-result');
+      resultContainer.innerHTML = `
+        <h3> 조건( 연령대 : ${ageRangeString} / 정책 혜택 : ${howValue} / 정책마감날짜 : ${wjdcorDateValue} / 정책유형 : ${familySituationString}) 에 부합하는 지역 : ${region1Value} ${region2Value} 의 복지 정책을 검색 중 입니다..</h3>
+        <div class="d-flex justify-content-center">
+          <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
+      `;
+
+      setTimeout(() => {
+        resultContainer.innerHTML = '';
+        document.getElementById('result_card').style.display = 'flex';
+        document.getElementById('result_card').style.flexWrap = 'wrap';
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+          if (this.readyState == 4 && this.status == 200) {
+            // 요청이 완료되면 응답을 받아와서 테이블에 추가합니다.
+            document.getElementById("result_card").innerHTML = this.responseText;
+          }
+        };
+        xhttp.open("POST", "./php/welfare_search.php", true);
+        // POST 요청에 필요한 데이터를 FormData 객체를 사용하여 전송합니다.
+        var formData = new FormData();
+        formData.append('region', document.getElementById('region1').value + " " + document.getElementById('region2').value);
+        
+        formData.append('wjdcordate', document.getElementById('wjdcordate').value);
+        formData.append('how', document.getElementById('how').value);
+        var checkboxes = document.querySelectorAll('.form-check-input:checked');
+        checkboxes.forEach(function (checkbox) {
+          formData.append('familySituations[]', checkbox.value);
+        });
+        xhttp.send(formData);
+      }, 3000);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const searchBtn = document.getElementById('btn-search');
+      searchBtn.addEventListener('click', event => {
+        event.preventDefault();
+        search_result();
+      });
+    });
+  </script>
+
+  <script>
+    // 지역 선택에 따라 세부 지역 옵션을 업데이트하는 함수
+    function updateCities() {
+      const region1 = document.getElementById("region1");
+      const region2 = document.getElementById("region2");
+      const options = {
+        "강원특별자치도": "<option value=''>선택</option><option value='강릉시'>강릉시</option><option value='고성군'>고성군</option><option value='동해시'>동해시</option><option value='삼척시'>삼척시</option><option value='속초시'>속초시</option><option value='양구군'>양구군</option><option value='양양군'>양양군</option><option value='영월군'>영월군</option><option value='원주시'>원주시</option><option value='인제군'>인제군</option><option value='정선군'>정선군</option><option value='철원군'>철원군</option><option value='춘천시'>춘천시</option><option value='태백시'>태백시</option><option value='평창군'>평창군</option><option value='홍천군'>홍천군</option><option value='화천군'>화천군</option><option value='횡성군'>횡성군</option>",
+        "경기도": "<option value=''>선택</option><option value='가평군'>가평군</option><option value='고양시'>고양시</option><option value='과천시'>과천시</option><option value='광명시'>광명시</option><option value='광주시'>광주시</option><option value='구리시'>구리시</option><option value='군포시'>군포시</option><option value='김포시'>김포시</option><option value='남양주시'>남양주시</option><option value='동두천시'>동두천시</option><option value='부천시'>부천시</option><option value='성남시'>성남시</option><option value='수원시'>수원시</option><option value='시흥시'>시흥시</option><option value='안산시'>안산시</option><option value='안성시'>안성시</option><option value='안양시'>안양시</option><option value='양주시'>양주시</option><option value='양평군'>양평군</option><option value='여주시'>여주시</option><option value='연천군'>연천군</option><option value='오산시'>오산시</option><option value='용인시'>용인시</option><option value='의왕시'>의왕시</option><option value='의정부시'>의정부시</option><option value='이천시'>이천시</option><option value='파주시'>파주시</option><option value='평택시'>평택시</option><option value='포천시'>포천시</option><option value='하남시'>하남시</option><option value='화성시'>화성시</option>",
+        "경상남도": "<option value=''>선택</option><option value='거제시'>거제시</option><option value='거창군'>거창군</option><option value='고성군'>고성군</option><option value='김해시'>김해시</option><option value='남해군'>남해군</option><option value='밀양시'>밀양시</option><option value='사천시'>사천시</option><option value='산청군'>산청군</option><option value='양산시'>양산시</option><option value='의령군'>의령군</option><option value='진주시'>진주시</option><option value='창녕군'>창녕군</option><option value='창원시'>창원시</option><option value='통영시'>통영시</option><option value='하동군'>하동군</option><option value='함안군'>함안군</option><option value='함양군'>함양군</option><option value='합천군'>합천군</option>",
+        "경상북도": "<option value=''>선택</option><option value='경산시'>경산시</option><option value='경주시'>경주시</option><option value='고령군'>고령군</option><option value='구미시'>구미시</option><option value='김천시'>김천시</option><option value='문경시'>문경시</option><option value='봉화군'>봉화군</option><option value='상주시'>상주시</option><option value='성주군'>성주군</option><option value='안동시'>안동시</option><option value='영덕군'>영덕군</option><option value='영양군'>영양군</option><option value='영주시'>영주시</option><option value='영천시'>영천시</option><option value='예천군'>예천군</option><option value='울릉군'>울릉군</option><option value='울진군'>울진군</option><option value='의성군'>의성군</option><option value='청도군'>청도군</option><option value='청송군'>청송군</option><option value='칠곡군'>칠곡군</option><option value='포항시'>포항시</option>",
+        "전라남도": "<option value=''>선택</option><option value='강진군'>강진군</option><option value='고흥군'>고흥군</option><option value='곡성군'>곡성군</option><option value='광양시'>광양시</option><option value='구례군'>구례군</option><option value='나주시'>나주시</option><option value='담양군'>담양군</option><option value='목포시'>목포시</option><option value='무안군'>무안군</option><option value='보성군'>보성군</option><option value='순천시'>순천시</option><option value='신안군'>신안군</option><option value='여수시'>여수시</option><option value='영광군'>영광군</option><option value='영암군'>영암군</option><option value='완도군'>완도군</option><option value='장성군'>장성군</option><option value='장흥군'>장흥군</option><option value='진도군'>진도군</option><option value='함평군'>함평군</option><option value='해남군'>해남군</option><option value='화순군'>화순군</option>",
+        "전북특별자치도": "<option value=''>선택</option><option value='고창군'>고창군</option><option value='군산시'>군산시</option><option value='김제시'>김제시</option><option value='남원시'>남원시</option><option value='무주군'>무주군</option><option value='부안군'>부안군</option><option value='순창군'>순창군</option><option value='완주군'>완주군</option><option value='익산시'>익산시</option><option value='임실군'>임실군</option><option value='장수군'>장수군</option><option value='전주시'>전주시</option><option value='정읍시'>정읍시</option><option value='진안군'>진안군</option>",
+        "충청남도": "<option value=''>선택</option><option value='계룡시'>계룡시</option><option value='공주시'>공주시</option><option value='금산군'>금산군</option><option value='논산시'>논산시</option><option value='당진시'>당진시</option><option value='보령시'>보령시</option><option value='부여군'>부여군</option><option value='서산시'>서산시</option><option value='서천군'>서천군</option><option value='아산시'>아산시</option><option value='예산군'>예산군</option><option value='천안시'>천안시</option><option value='천안시'>천안시</option><option value='청양군'>청양군</option><option value='태안군'>태안군</option><option value='홍성군'>홍성군</option>",
+        "충청북도": "<option value=''>선택</option><option value='괴산군'>괴산군</option><option value='단양군'>단양군</option><option value='보은군'>보은군</option><option value='영동군'>영동군</option><option value='옥천군'>옥천군</option><option value='음성군'>음성군</option><option value='제천시'>제천시</option><option value='증평군'>증평군</option><option value='진천군'>진천군</option><option value='청주시'>청주시</option><option value='충주시'>충주시</option>"
+      };
+
+      region2.innerHTML = options[region1.value] || "<option value=''>선택</option>";
+    }
+
+    document.getElementById("region1").addEventListener("change", updateCities);
+  </script>
+
+  <!-- [ form-element ] end -->
+  </div>
+
+  <!-- [ Main Content ] end -->
+  </div>
+  </div>
+
+
+  <!-- [ Main Content ] end -->
+  <footer class="pc-footer">
+    <div class="footer-wrapper container-fluid">
+      <div class="row">
+
+
+      </div>
+    </div>
+  </footer>
+  <div class="offcanvas border-0 pct-offcanvas offcanvas-end" tabindex="-1" id="offcanvas_pc_layout">
+    <div class="offcanvas-header justify-content-between">
+      <h5 class="offcanvas-title">Settings</h5>
+      <button type="button" class="btn btn-icon btn-link-danger" data-bs-dismiss="offcanvas" aria-label="Close"><i
+          class="ti ti-x"></i></button>
+    </div>
+    <div class="pct-body customizer-body">
+      <div class="offcanvas-body py-0">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            <div class="pc-dark">
+              <h6 class="mb-1">Theme Mode</h6>
+              <p class="text-muted text-sm">Choose light or dark mode or Auto</p>
+              <div class="row theme-color theme-layout">
+                <div class="col-4">
+                  <div class="d-grid">
+                    <button class="preset-btn btn active" data-value="true" onclick="layout_change('light');">
+                      <span class="btn-label">Light</span>
+                      <span class="pc-lay-icon"><span></span><span></span><span></span><span></span></span>
+                    </button>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="d-grid">
+                    <button class="preset-btn btn" data-value="false" onclick="layout_change('dark');">
+                      <span class="btn-label">Dark</span>
+                      <span class="pc-lay-icon"><span></span><span></span><span></span><span></span></span>
+                    </button>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="d-grid">
+                    <button class="preset-btn btn" data-value="default" onclick="layout_change_default();"
+                      data-bs-toggle="tooltip"
+                      title="Automatically sets the theme based on user's operating system's color scheme.">
+                      <span class="btn-label">Default</span>
+                      <span class="pc-lay-icon d-flex align-items-center justify-content-center">
+                        <i class="ph-duotone ph-cpu"></i>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <h6 class="mb-1">Sidebar Theme</h6>
+            <p class="text-muted text-sm">Choose Sidebar Theme</p>
+            <div class="row theme-color theme-sidebar-color">
+              <div class="col-6">
+                <div class="d-grid">
+                  <button class="preset-btn btn" data-value="true" onclick="layout_sidebar_change('dark');">
+                    <span class="btn-label">Dark</span>
+                    <span class="pc-lay-icon"><span></span><span></span><span></span><span></span></span>
+                  </button>
+                </div>
+              </div>
+              <div class="col-6">
+                <div the="d-grid">
+                  <button class="preset-btn btn active" data-value="false" onclick="layout_sidebar_change('light');">
+                    <span the="btn-label">Light</span>
+                    <span class="pc-lay-icon"><span></span><span></span><span></span><span></span></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <h6 class="mb-1">Accent color</h6>
+            <p class="text-muted text-sm">Choose your primary theme color</p>
+            <div class="theme-color preset-color">
+              <a href="#!" class="active" data-value="preset-1"><i class="ti ti-check"></i></a>
+              <a href="#!" data-value="preset-2"><i class="ti ti-check"></i></a>
+              <a href="#!" data-value="preset-3"><i class="ti ti-check"></i></a>
+              <a href="#!" data-value="preset-4"><i class="ti ti-check"></i></a>
+              <a href="#!" data-value="preset-5"><i class="ti ti-check"></i></a>
+              <a href="#!" data-value="preset-6"><i class="ti ti-check"></i></a>
+              <a href="#!" data-value="preset-7"><i the="ti ti-check"></i></a>
+              <a href="#!" data-value="preset-8"><i class="ti ti-check"></i></a>
+              <a href="#!" data-value="preset-9"><i class="ti ti-check"></i></a>
+              <a href="#!" data-value="preset-10"><i class="ti ti-check"></i></a>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <h6 class="mb-1">Sidebar Caption</h6>
+            <p class="text-muted text-sm">Sidebar Caption Hide/Show</p>
+            <div class="row theme-color theme-nav-caption">
+              <div class="col-6">
+                <div class="d-grid">
+                  <button class="preset-btn btn active" data-value="true" onclick="layout_caption_change('true');">
+                    <span class="btn-label">Caption Show</span>
+                    <span
+                      class="pc-lay-icon"><span></span><span></span><span><span></span><span></span></span><span></span></span>
+                  </button>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="d-grid">
+                  <button class="preset-btn btn" data-value="false" onclick="layout_caption_change('false');">
+                    <span class="btn-label">Caption Hide</span>
+                    <span
+                      class="pc-lay-icon"><span></span><span></span><span><span></span><span></span></span><span></span></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="pc-rtl">
+              <h6 class="mb-1">Theme Layout</h6>
+              <p class="text-muted text-sm">LTR/RTL</p>
+              <div class="row theme-color theme-direction">
+                <div class="col-6">
+                  <div class="d-grid">
+                    <button class="preset-btn btn active" data-value="false" onclick="layout_rtl_change('false');">
+                      <span class="btn-label">LTR</span>
+                      <span class="pc-lay-icon"><span></span><span></span><span></span><span></span></span>
+                    </button>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="d-grid">
+                    <button class="preset-btn btn" data-value="true" onclick="layout_rtl_change('true');">
+                      <span class="btn-label">RTL</span>
+                      <span class="pc-lay-icon"><span></span><span></span><span></span><span></span></span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item pc-box-width">
+            <div class="pc-container-width">
+              <h6 class="mb-1">Layout Width</h6>
+              <p class="text-muted text-sm">Choose Full or Container Layout</p>
+              <div class="row theme-color theme-container">
+                <div class="col-6">
+                  <div class="d-grid">
+                    <button class="preset-btn btn active" data-value="false" onclick="change_box_container('false')">
+                      <span class="btn-label">Full Width</span>
+                      <span class="pc-lay-icon"><span></span><span></span><span></span><span><span></span></span></span>
+                    </button>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="d-grid">
+                    <button class="preset-btn btn" data-value="true" onclick="change_box_container('true')">
+                      <span class="btn-label">Fixed Width</span>
+                      <span class="pc-lay-icon"><span></span><span></span><span></span><span><span></span></span></span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="d-grid">
+              <button class="btn btn-light-danger" id="layoutreset">Reset Layout</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- [Page Specific JS] start -->
+  <script src="../assets/js/plugins/apexcharts.min.js"></script>
+  <script src="../assets/js/plugins/jsvectormap.min.js"></script>
+  <script src="../assets/js/plugins/world.js"></script>
+  <script src="../assets/js/plugins/world-merc.js"></script>
+  <script src="../assets/js/pages/dashboard-default.js"></script>
+  <!-- [Page Specific JS] end -->
+  <!-- Required Js -->
+  <script src="../assets/js/plugins/popper.min.js"></script>
+  <script src="../assets/js/plugins/simplebar.min.js"></script>
+  <script src="../assets/js/plugins/bootstrap.min.js"></script>
+  <script src="../assets/js/fonts/custom-font.js"></script>
+  <script src="../assets/js/pcoded.js"></script>
+  <script src="../assets/js/plugins/feather.min.js"></script>
+
+
+
+
+
+  <script>layout_change('light');</script>
+
+
+
+
+  <script>layout_sidebar_change('light');</script>
+
+
+
+  <script>change_box_container('false');</script>
+
+
+  <script>layout_caption_change('true');</script>
+
+
+
+
+  <script>layout_rtl_change('false');</script>
+
+
+  <script>preset_change("preset-1");</script>
+
+</body>
+<!-- [Body] end -->
+
+</html>

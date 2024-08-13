@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- [Head] start -->
+
+<head>
+  <title>복지얌 빵빵아</title>
+  <!-- [Meta] -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="description"
+    content="Light Able admin and dashboard template offer a variety of UI elements and pages, ensuring your admin panel is both fast and effective." />
+  <meta name="author" content="phoenixcoded" />
+  <link rel="stylesheet" href="../assets/fonts/font.css">
+  <!-- [Favicon] icon -->
+  <link rel="icon" href="../assets/images/title_logo.png" type="image/x-icon">
+
+  <!-- map-vector css -->
+  <link rel="stylesheet" href="../assets/css/plugins/jsvectormap.min.css">
+  <!-- [Google Font : Public Sans] icon -->
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- [Tabler Icons] https://tablericons.com -->
+  <link rel="stylesheet" href="../assets/fonts/tabler-icons.min.css">
+  <!-- [Feather Icons] https://feathericons.com -->
+  <link rel="stylesheet" href="../assets/fonts/feather.css">
+  <!-- [Font Awesome Icons] https://fontawesome.com/icons -->
+  <link rel="stylesheet" href="../assets/fonts/fontawesome.css">
+  <!-- [Material Icons] https://fonts.google.com/icons -->
+  <link rel="stylesheet" href="../assets/fonts/material.css">
+  <!-- [Template CSS Files] -->
+  <link rel="stylesheet" href="../assets/css/style.css" id="main-style-link">
+  <link rel="stylesheet" href="../assets/css/style-preset.css">
+
+</head>
+<!-- [Head] end -->
+<!-- [Body] Start -->
+
+<body data-pc-preset="preset-1" data-pc-direction="ltr" data-pc-theme="light">
+  <div class="pc_container">
+    <div class="row justify-content-center">
+      <div id="taskCreator" class="col-md-8">
+        <script>
+          const date = new URLSearchParams(window.location.search).get('date');
+        </script>
+        <h2 class="text-center mb-4">할일 - <script>document.write(date);</script></h2>
+
+        <!-- Delete Button -->
+        <button onclick="deleteTask();" class="btn btn-warning" style="position: absolute; right: 100px; top: 20px;">삭제</button>
+
+        <!-- Close Button -->
+        <button onclick="window.close();" class="btn btn-danger" style="position: absolute; right: 20px; top: 20px;">창닫기</button>
+
+        <script>
+          function deleteTask() {
+            const taskId = new URLSearchParams(window.location.search).get('task_id');
+            if (confirm('정말 이 할일을 삭제하시겠습니까?')) {
+              fetch(`../dashboard/php/postTask3.php?task_id=${taskId}`, { method: 'DELETE' })
+                .then(response => response.text())
+                .then(data => {
+                  alert(data);
+                  window.close();
+                })
+                .catch(error => alert('Error deleting task: ' + error));
+            }
+          }
+        </script>
+        <script>
+          async function fetchTaskData() {
+            const taskId = new URLSearchParams(window.location.search).get('task_id');
+            try {
+              const response = await fetch(`../dashboard/php/postTask2.php?task_id=${taskId}`);
+              if (!response.ok) {
+                throw new Error('Network response was not ok');
+              }
+              const data = await response.json();
+              const taskData = data.tasks[0]; // Assuming the first task is what we need
+
+              // Populate the div element with task titles
+              const taskTitleDiv = document.getElementById('taskTitle');
+              data.tasks.forEach(task => {
+                const div = document.createElement('div');
+                div.textContent = task.applicationName;
+                div.dataset.taskId = task.task_id;
+                div.dataset.photoUrl = task.photoUrl;
+                div.dataset.description = task.description;
+                const birthYear = parseInt(task.age.substring(0, 2));
+                const centuryIndicator = parseInt(task.age.substring(7, 8));
+                const centuryOffset = (centuryIndicator === 1 || centuryIndicator === 2) ? 1900 : 2000;
+                const currentYear = new Date().getFullYear();
+                const age = currentYear - (birthYear + centuryOffset);
+                div.dataset.age = age;
+                div.onclick = function() {
+                  document.getElementById('imageDisplay').style.backgroundImage = `url('${this.dataset.photoUrl}')`;
+                  document.getElementById('taskDescription').textContent = this.dataset.description;
+                  document.getElementById('taskAge').textContent = this.dataset.age;
+                  
+                };
+                taskTitleDiv.appendChild(div);
+              });
+
+              // Initialize display with the first task data
+              if (data.tasks.length > 0) {
+                taskTitleDiv.children[0].click();
+              }
+            } catch (error) {
+              console.error('Failed to fetch task data:', error);
+            }
+          }
+
+          document.addEventListener('DOMContentLoaded', fetchTaskData);
+        </script>
+        <div class="row">
+        <div class="form-group mb-3 d-flex justify-content-between">
+          <div class="p-2" style="flex: 1; min-width: 0;">
+            <label for="taskTitle">이름</label>
+            <div id="taskTitle" class="form-control overflow-auto">
+              <!-- Task titles will be populated here -->
+            </div>
+            <br>
+            <label for="taskAge">나이</label>
+            <div id="taskAge" class="form-control overflow-auto"></div>
+          </div>
+          
+          
+          
+          <div class="p-2" style="flex: 1; min-width: 0;">
+            <label for="taskTitle">이미지</label>
+            <div id="imageDisplay" class="ml-3" style="height: 150px; background-size: contain; background-repeat: no-repeat; background-position: center;">
+              <!-- Image will be displayed here -->
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group mb-6" style="display: grid; grid-template-columns: auto 1fr; gap: 10px; align-items: center;">
+          <label for="taskDescription" class="form-label" style="font-weight: bold; color: #0D6EFD;">설명</label>
+          <textarea id="taskDescription" class="form-control" placeholder="할일 설명" rows="6" required></textarea>
+        </div>
+        
+      </div>
+    </div>
+</body>
+
+  
+
+
+
+
+
+  <!-- [ Main Content ] end -->
+
+
+
+  <!-- [ Main Content ] end -->
+
+
+  <!-- [Page Specific JS] start -->
+  <script src="../assets/js/plugins/apexcharts.min.js"></script>
+  <script src="../assets/js/plugins/jsvectormap.min.js"></script>
+  <script src="../assets/js/plugins/world.js"></script>
+  <script src="../assets/js/plugins/world-merc.js"></script>
+  <script src="../assets/js/pages/dashboard-default.js"></script>
+  <!-- [Page Specific JS] end -->
+  <!-- Required Js -->
+  <script src="../assets/js/plugins/popper.min.js"></script>
+  <script src="../assets/js/plugins/simplebar.min.js"></script>
+  <script src="../assets/js/plugins/bootstrap.min.js"></script>
+  <script src="../assets/js/fonts/custom-font.js"></script>
+  <script src="../assets/js/pcoded1.js"></script>
+  <script src="../assets/js/plugins/feather.min.js"></script>
+ 
+
+
+
+
+
+
+
+
+
+</body>
+<!-- [Body] end -->
+
+</html>
